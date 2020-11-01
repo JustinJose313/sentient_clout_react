@@ -11,7 +11,7 @@ export const Section = styled.div`
     display: block;
   }
 `
-export const ServiceHeader = styled.div`
+export const ServiceHeader = styled(motion.div)`
   margin: 0 auto;
   h1 {
     font-weight: 900;
@@ -33,7 +33,7 @@ export const ServiceHeader = styled.div`
   }
 `
 
-export const CardWrap = styled.div`
+export const CardWrap = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(12, minmax(auto, 60px));
   grid-gap: 40px;

@@ -61,6 +61,9 @@ export const MenuBtn = styled.div`
     border: none;
     outline: none;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
     span {
       display: block;
@@ -69,8 +72,15 @@ export const MenuBtn = styled.div`
       background-color: black;
       margin-bottom: 5px;
       z-index: 99;
+      transition: all 0.2s ease-in-out;
 
-      &:first-child {
+      &:last-child {
+        width: 20px;
+      }
+    }
+    &:hover span{
+      &:last-child {
+        width: 30px;
       }
     }
   }
