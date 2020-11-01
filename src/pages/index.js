@@ -7,6 +7,7 @@ import HomeServices from "../components/homeComps/HomeServices"
 
 export const GlobalStyles = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
 * {
   margin: 0;
@@ -15,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
 }
+
 body {
   height: 100vh;
   width: 100%;

@@ -18,7 +18,7 @@ export const Hero = styled(Background)`
       margin-bottom: 150px;
       color: ${props => props.theme.text};
       font-weight: 900;
-      font-size: 50px;
+      font-size: 66px;
       span {
         font-weight: 900;
         color: ${props => props.theme.primary};
