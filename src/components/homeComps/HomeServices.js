@@ -14,7 +14,8 @@ import {
   Section,
   ServiceHeader,
   CardWrap,
-  Card,
+  CardWide,
+  CardFlex,
 } from "../../styles/HomeStyles/homeServices"
 import Link from "gatsby-link"
 import Title from "../title"
@@ -70,69 +71,72 @@ const HomeServices = () => {
           initial="hidden"
           variants={variant}
         >
-          <Card>
-            <div className="card-img">
+          <CardWide>
+            <div className="cardImgWrap">
               <img src={branding} alt="" />
             </div>
-            <div className="card-content">
+            <div className="cardContentWrap">
               <h4 className="card-title text-medium">Business Branding.</h4>
               <p>Express your Identity through Design. Make it Memorable.</p>
             </div>
-          </Card>
-          <Card>
-            <div className="card-img">
-              <img src={UX} alt="" />
+          </CardWide>
+          <CardFlex>
+            <div className="cardSmall">
+              <div className="cardImgWrap">
+                <img src={UX} alt="" />
+              </div>
+              <div className="cardContentWrap">
+                <h4 className="card-title text-medium">User Experience..</h4>
+                <p>Make user react to every touch and interaction.</p>{" "}
+              </div>
             </div>
-            <div className="card-content">
-              <h4 className="card-title text-medium">User Experience..</h4>
-              <p>Make user react to every touch and interaction.</p>
+            <div className="cardSmall">
+              <div className="cardImgWrap">
+                <img src={landing} alt="" />
+              </div>
+              <div className="cardContentWrap">
+                <h4 className="card-title text-medium">Landing Pages.</h4>
+                <p>
+                  Your landing page lets you make a trade, some sort of special
+                  offer, piece of information or a deal, in return for providing
+                  contact information..
+                </p>
+              </div>
             </div>
-          </Card>
-          <Card>
-            <div className="card-img">
-              <img src={landing} alt="" />
+          </CardFlex>
+          <CardWide>
+            <div className="cardImgWrap">
+              <video muted loop autoPlay src={responsive} alt="" />
             </div>
-            <div className="card-content">
-              <h4 className="card-title text-medium">Landing Pages.</h4>
-              <p>
-                Your landing page lets you make a trade, some sort of special
-                offer, piece of information or a deal, in return for providing
-                contact information..
-              </p>
-            </div>
-          </Card>
-          <Card>
-            <div className="card-img">
-              <video muted autoPlay loop src={responsive}></video>
-            </div>
-            <div className="card-content">
+            <div className="cardContentWrap">
               <h4 className="card-title text-medium">Responsive Design.</h4>
               <p>
                 Increase reach to customers and clients on smaller devices
                 (tablets & smartphones).
-              </p>
+              </p>{" "}
             </div>
-          </Card>
-          <Card>
-            <div className="card-img">
-              <img src={minimal} alt="" />
-            </div>
-            <div className="card-content">
+          </CardWide>
+          <CardFlex>
+            <div className="cardSmall">
+              <div className="cardImgWrap">
+                <img src={minimal} alt="" />
+              </div>
+              <div className="cardContentWrap">
               <h4 className="card-title text-medium">Minimal Design.</h4>
               <p>
                 Show customers what's important and make the experience clean.
-              </p>
+              </p>              </div>
             </div>
-          </Card>
-          <Card>
-            <div className="card-img">
-              <img src={fastLoad} alt="" />
-            </div>
-            <div className="card-content">
+            <div className="cardSmall">
+              <div className="cardImgWrap">
+                <img src={fastLoad} alt="" />
+              </div>
+              <div className="cardContentWrap">
               <h4 className="card-title text-medium">Load Faster.</h4>
               <p>Be the first one that your user see when searched.</p>
+              </div>
             </div>
-          </Card>
+          </CardFlex>
         </CardWrap>
       </Container>
     </Section>

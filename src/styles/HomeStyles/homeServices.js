@@ -34,71 +34,113 @@ export const ServiceHeader = styled(motion.div)`
 `
 
 export const CardWrap = styled(motion.div)`
-  display: grid;
-  grid-template-columns: repeat(12, minmax(auto, 60px));
-  grid-gap: 40px;
-  @media (max-width: 500px) {
-    grid-gap: 10px;
+  width: 100%;
+`
+
+export const CardWide = styled.div`
+  margin: 0 auto;
+  width: 80%;
+  background-color: black;
+  border-radius: 30px;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  }
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+  .cardImgWrap {
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    img {
+      transition: 0.3s;
+      width: 100%;
+    }
+    video {
+      transition: 0.3s;
+      width: 100%;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+      video {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .cardContentWrap {
+    padding: 30px 30px 50px;
+    color: white;
+    @media (max-width: 600px) {
+      padding: 10px 20px 30px;
+    }
+    h4 {
+      font-size: 50px;
+      font-weight: 600;
+      @media (max-width: 600px) {
+        font-size: 30px;
+      }
+    }
   }
 `
 
-export const Card = styled.div`
-  grid-column-end: span 4;
+export const CardFlex = styled(motion.div)`
+  margin: 100px auto;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  cursor: pointer;
-
-  .card-img {
-    width: 100%;
-    height: 224px;
-    overflow: hidden;
-    border-radius: 10px;
-    object-fit: cover;
-
-    img {
+  justify-content: space-around;
+  align-items: flex-start;
+  transition: 0.3s;
+  .cardSmall {
+    width: 450px;
+    margin: 10px;
+    background-color: black;
+    border-radius: 30px;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    }
+    .cardImgWrap {
       width: 100%;
-      transform: scale(1.1);
-      height: 120%;
-    }
-    video {
-      width: 100%;
-    }
-  }
-
-  .card-content {
-    h4 {
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 1.15;
-      margin-top: 10px;
-      margin-bottom: 5px;
-      letter-spacing: -0.8px;
-      color: ${props => props.theme.text};
-    }
-    p {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: -0.42px;
-      line-height: 1.2;
-      color: ${props => props.theme.text};
-      margin-bottom: 100px;
-      
-      
-    }
-  }
-  &:last-child .card-content > p{
-        margin-bottom: 0;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.2) inset;
+      -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.2) inset;
+      img {
+        transition: 0.3s;
+        width: 100%;
       }
-  &:hover .card-content > h4 {
-    color: ${props => props.theme.primary};
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .cardContentWrap {
+      padding: 30px 30px 50px;
+      color: white;
+      @media (max-width: 600px) {
+        padding: 10px 20px 30px;
+      }
+      h4 {
+        font-size: 50px;
+        font-weight: 600;
+        @media (max-width: 600px) {
+          font-size: 30px;
+        }
+      }
+    }
   }
-
-  @media (max-width: 1000px) {
-    grid-column-end: span 6;
+  @media (max-width: 880px) {
+    flex-direction: column;
+    align-items: center;
+    .cardSmall {
+      width: 100%;
+      &:last-child {
+        margin: 100px 10px 10px 10px;
+      }
+    }
   }
-  @media (max-width: 700px) {
-    grid-column-end: span 12;
-  }
-  
 `
