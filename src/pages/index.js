@@ -18,9 +18,18 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #f9f8fd;
+  overscroll-behavior-y: none;
+}
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 `
 export default function Home() {
