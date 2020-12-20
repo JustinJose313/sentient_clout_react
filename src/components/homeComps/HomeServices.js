@@ -24,7 +24,7 @@ const HomeServices = () => {
   const animation = useAnimation()
   const [serviceRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-300px",
+    rootMargin: "-50px",
   })
 
   const ease = [0.6, 0.05, -0.01, 0.9]
@@ -138,7 +138,7 @@ const HomeServices = () => {
             </div>
           </CardFlex>
         </CardWrap>
-      </Container>
+      </Container>``
     </Section>
   )
 }
