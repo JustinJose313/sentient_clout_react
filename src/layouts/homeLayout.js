@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import { useEffect, useRef } from "react"
-import useWindowSize from "./../hooks/useWindowSize"
+import React, { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
 import Navigation from "../components/navigation"
 import NavigationFullScreen from "../components/navigationFullScreen"
+
+import LocomotiveScroll from "locomotive-scroll"
 
 const HomeLayout = ({ children }) => {
   const [toggleMenu, setToggleMenu] = useState(false)
@@ -13,9 +13,19 @@ const HomeLayout = ({ children }) => {
     background: "#f9f8fd",
     primary: "#0c9869",
   }
+  useEffect(() => {
+    setTimeout(function () {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      })
+    }, 1000)
+    
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <div data-scroll-container className="scroll">
         <Navigation toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
         <NavigationFullScreen
           toggleMenu={toggleMenu}
