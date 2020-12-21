@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { NavWrapper, Logo, Menu, MenuBtn } from "../styles/navigationStyles"
-import Link from "gatsby-link"
+import {Link} from "gatsby"
 import logo from "../logo.svg"
 
 
@@ -43,10 +43,10 @@ const Navigation = ({toggleMenu, setToggleMenu}) => {
             delay: 1.2,
           }}
         >
-          <Link>Home</Link>
-          <Link>Services</Link>
-          <Link>Projects</Link>
-          <Link>Contact us</Link>
+          <Link to='/'>Home</Link>
+          <Link to='/services'>Services</Link>
+          <Link to='/project'>Projects</Link>
+          <Link to='/contact'>Contact us</Link>
         </Menu>
       </NavWrapper>
       <MenuBtn onClick={() => setToggleMenu(toggleMenu => !toggleMenu)}>
