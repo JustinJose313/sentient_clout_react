@@ -5,18 +5,18 @@ import Hero from './../components/hero'
 //styles
 import { createGlobalStyle } from "styled-components"
 import { GlobalStyles } from "."
-import service from './../assets/images/img.jpg';
+import project from './../assets/images/img.jpg';
 
-const Services = () => {
-    console.log(service)
+const Projects = () => {
+    console.log(project)
     return (
         <>
   <GlobalStyles />
     <HomeLayout>
-      <Hero title='services' bg={service}/>
+      <Hero title='Projects' bg={project}/>
     </HomeLayout>
   </>
     )
 }
 
-export default Services;
+export default Projects;

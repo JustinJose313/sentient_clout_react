@@ -45,8 +45,10 @@ const Navigation = ({toggleMenu, setToggleMenu}) => {
         >
           <Link to='/'>Home</Link>
           <Link to='/services'>Services</Link>
-          <Link to='/project'>Projects</Link>
-          <Link to='/contact'>Contact us</Link>
+          <Link to='/projects'>Projects</Link>
+
+          <Link to='/contactUs'>Contact us</Link>
+
         </Menu>
       </NavWrapper>
       <MenuBtn onClick={() => setToggleMenu(toggleMenu => !toggleMenu)}>
