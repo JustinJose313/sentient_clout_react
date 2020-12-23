@@ -2,11 +2,12 @@ import React from "react"
 import HomeLayout from "../layouts/homeLayout"
 //styles
 import { createGlobalStyle } from "styled-components"
-import HomeHeader from "../components/homeComps/HomeHeader"
-import HomeServices from "../components/homeComps/HomeServices"
-
 //css
 import './../styles/locomotive.css'
+import HomeHeader from "../components/homeComps/HomeHeader"
+import HomeServices from "../components/homeComps/HomeServices"
+import HomeProject from "../components/homeComps/HomeProject"
+
 
 
 export const GlobalStyles = createGlobalStyle`
@@ -40,6 +41,7 @@ export default function Home() {
     <HomeLayout>
       <HomeHeader />
       <HomeServices />
+      <HomeProject />
     </HomeLayout>
   </>
   
