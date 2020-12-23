@@ -31,7 +31,7 @@ const NavigationFullScreen = ({ toggleMenu, setToggleMenu }) => {
     {
       id: 3,
       link: "CONTACT US",
-      path: "/contsct-us",
+      path: "/contactUs",
     },
   ]
   const navSocials = [
