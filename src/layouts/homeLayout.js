@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
 import Navigation from "../components/navigation"
 import NavigationFullScreen from "../components/navigationFullScreen"
+import Footer from "../components/Footer"
 
 import LocomotiveScroll from "locomotive-scroll"
 
@@ -14,13 +15,12 @@ const HomeLayout = ({ children }) => {
     primary: "#0c9869",
   }
   useEffect(() => {
-    setTimeout(function () {
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true,
-      })
-    }, 1000)
-    
+    // setTimeout(function () {
+    //   const scroll = new LocomotiveScroll({
+    //     el: document.querySelector("[data-scroll-container]"),
+    //     smooth: true,
+    //   })
+    // }, 1000)
   }, [])
 
   return (
@@ -37,6 +37,7 @@ const HomeLayout = ({ children }) => {
           </div>
         </div> */}
         {children}
+        <Footer />
       </div>
     </ThemeProvider>
   )
