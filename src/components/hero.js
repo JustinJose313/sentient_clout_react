@@ -1,9 +1,10 @@
 import React, { useEffect } from "react"
 import { useLocation } from '@reach/router';
-import styled from "styled-components"
+import styled from "styled-components/macro"
 import { motion, AnimatePresence } from "framer-motion"
 
 const Hero = ({ title, bg }) => {
+    const ease = [0.6, 0.05, -0.01, 0.9]
     const location = useLocation()
   
   const styles = {
@@ -20,7 +21,7 @@ const Hero = ({ title, bg }) => {
           transition={{
             delay: 1.2,
             duration: 1,
-            ease: [0.6, 0.05, -0.01, 0.9],
+            ease: ease,
           }}
           className="overlay"
           style={styles}
@@ -28,13 +29,12 @@ const Hero = ({ title, bg }) => {
           <Wrap>
             <div className="title">
               <motion.h1
-                initial={{ opacity: 0, y: 10 }}
-                exit={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   delay: 1.2,
                   duration: 1,
-                  ease: [0.6, 0.05, -0.01, 0.9],
+                  ease: ease,
                 }}
               >
                 <span>{title}</span>

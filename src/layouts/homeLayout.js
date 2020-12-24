@@ -5,6 +5,7 @@ import NavigationFullScreen from "../components/navigationFullScreen"
 import Footer from "../components/Footer"
 
 import LocomotiveScroll from "locomotive-scroll"
+import { motion } from "framer-motion"
 
 const HomeLayout = ({ children }) => {
   const [toggleMenu, setToggleMenu] = useState(false)
@@ -42,5 +43,6 @@ const HomeLayout = ({ children }) => {
     </ThemeProvider>
   )
 }
+
 
 export default HomeLayout
