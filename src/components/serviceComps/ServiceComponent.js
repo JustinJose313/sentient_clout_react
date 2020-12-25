@@ -6,13 +6,14 @@ const ServiceComponent = () => {
     return (
         <Wrap>
               
-             <div className="wrap">
-                <div className="left-section">
-             <h1><span>Creative and ux</span></h1>
+            <div className="grid">
+                <div className="title">
+                    <h1>Creative and ux</h1>
+                </div>
+                <div className="paragraph">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eum! Aliquid officiis tenetur, dignissimos vero ad saepe aut hic exercitationem id, dolorem, voluptate cum deleniti numquam quasi harum sed laborum!</p>
                 </div>
-                
-                <div className="right-section" style={{background: `url(${img})`}}>
+                <div className="img-section" style={{background: `url(${img})`}}>
                 </div>
             </div>  
         </Wrap>
@@ -24,60 +25,55 @@ export default ServiceComponent;
 
 
 const Wrap = styled.div`
-overflow: hidden;
+
+
+   .grid{
+       display:grid;
+       grid-template-columns:8% 40% 15% auto;
+       grid-template-rows:90px auto auto 95px;
+
+       .title{
+           grid-column:2/5;
+           grid-row:2;
+           /* z-index:1; */
+           h1 {
+             mix-blend-mode: difference;
+               color: white;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 110px;
+                line-height:1.5;
+                font-family: "Montserrat", sans-serif;
+                @media (max-width: 700px) {
+                    font-size: 40px;
+                }
+             span {
+            }
+          }
+       }
+
+       .paragraph{
+           grid-column:2/3;
+           grid-row:3;
+           z-index:1;   
+           
+            p{
+            font-family:sans-serif;
+            font-size:30px;
+            color: #24372c;
+            padding:20px 30px 20px 0;
+            }
+       }
+
+       .img-section{
+           grid-column:3/6;
+           grid-row:1/6;   
+           width:100vw;   
+       }
+
+
    
-.wrap{
-    background:rgb(255, 255, 255);
-    height:100vh;
-display: flex;
-
-
-.left-section{
-    padding-top:100px;
-    padding-left:100px;
-    max-width: 50%;
-    h1{
-        word-wrap:unset;
-    }
-        p{
-            font-size:16px;
-            width:100ch;
-            
-        }
-        width:100%;
-        height:100%;
-    }
-
-    .right-section{
-        width:50%;
-    height: 100%;
-    }
-
-p{
-     font-family:sans-serif;
-     font-size:30px;
-     
-
-     color: #24372c;
-    }
-    h1 {
-    color: white;
-   
-    mix-blend-mode: difference;
-    
-  }
-  span {
-    color: white;
-    mix-blend-mode: difference;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 110px;
-    line-height:1.5;
-    font-family: "Montserrat", sans-serif;
-    @media (max-width: 700px) {
-      font-size: 40px;
-    }
-  }
+  
     
 
 }
